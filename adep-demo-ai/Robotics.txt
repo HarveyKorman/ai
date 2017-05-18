@@ -1,0 +1,10 @@
+﻿Robotics  APIですが、
+下記アクセスし、スクレイピング後のXMLデータが取得できています。
+http://10.0.0.4:8080/XpopRobotics/XpopSearch021
+http://10.0.0.4:8080/XpopRobotics/XpopSearch022
+
+X-Pop　Script経由で取得してくれたXMLデータをJsonに転換し、Front Pageに表示されています。
+Front Pageは下記のAzureリンクでご確認ください。※下記のAzureサイトにアクセスにするには、VPNが必要かと思います。
+http://10.0.0.4:8011/src_0206/src/05.request.jsp
+訪問するシステムの検索条件はExcelに記入し、上記のページにアップロードする仕組みとなっています。
+検索条件のExcelは添付しております。
