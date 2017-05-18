@@ -1,0 +1,28 @@
+# Spring properties
+spring:
+  application:
+     name: ai  # Service registers under this name
+  data:
+    mongodb:
+      url: mongodb://127.0.0.1:27017/adep-demo-ai
+      
+# HTTP Server
+server:
+  port: 9620   # HTTP (Tomcat) port
+  context-path: /boot  
+
+# Discovery Server Access
+#  1. DEV ONLY: Reduce the lease renewal interval to speed up registration
+#  2. Define URL of registration server (defaultZone)
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9500/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
+
+#Timeout
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
