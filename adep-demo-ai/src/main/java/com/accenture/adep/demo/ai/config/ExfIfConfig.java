@@ -7,15 +7,15 @@ import org.springframework.context.annotation.Configuration;
 public class ExfIfConfig {
 
     @Bean
-    public DefaultSonarQubeDataExtrator getDefaultSonarQubeDataExtrator() {
-        return new DefaultSonarQubeDataExtrator();
+    public DefaultRobotiscExtrator getDefaultRobotiscExtrator() {
+        return new DefaultRobotiscExtrator();
     }
     
 	@Bean
 	public ExtIfRunner getExtIfRunner() {
 
 		ExtIfRunner extIfRunner = new ExtIfRunner();
-		extIfRunner.registerExtIf(ExtIfName.Redmine, this.getDefaultSonarQubeDataExtrator());
+		extIfRunner.registerExtIf(ExtIfName.Robotis, this.getDefaultRobotiscExtrator());
 		return extIfRunner;
 	}
 
