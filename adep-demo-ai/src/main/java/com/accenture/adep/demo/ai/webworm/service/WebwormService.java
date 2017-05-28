@@ -8,7 +8,6 @@ import com.accenture.adep.demo.ai.config.ExtIfRunnerStatus;
 import com.accenture.adep.demo.ai.config.ExtIfRunnerStatus.Status;
 
 public interface WebwormService {
-    void getWebworm();
     /**
      * Update external-if executed status
      * 
@@ -48,4 +47,7 @@ public interface WebwormService {
      * @return Control Command
      */
     ExtIfRunnerControlCommand getControlCommand(ExtIfName extIfName);
+	String getWeather(String lat, String lon);
+	String getRoboticsContent(String type);
+	void saveRoboticsContent();
 }

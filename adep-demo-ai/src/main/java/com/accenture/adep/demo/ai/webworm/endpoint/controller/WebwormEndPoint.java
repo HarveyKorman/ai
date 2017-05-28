@@ -11,8 +11,16 @@ public class WebwormEndPoint {
 	@Autowired
     WebwormService webwormService;
     
-	@RequestMapping("/message/hello")
-	public void test(){
-	    webwormService.getWebworm();
+	@RequestMapping("/getWeather")
+	public String getWeather(){
+		String lat = "35";
+		String lon = "139";
+	    return webwormService.getWeather(lat, lon);
+	}
+	
+	@RequestMapping("/getRoboticsContent")
+	public String getRoboticsContent(){
+		//TODO type
+	    return webwormService.getRoboticsContent("");
 	}
 }
